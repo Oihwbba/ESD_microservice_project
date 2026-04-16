@@ -114,7 +114,7 @@ services:
     ports:
       - "5001:5001"
     environment:
-      - dbURL=mysql+mysqlconnector://root:jpPOaVCbCXnTWjDOBzPtDoRKYwqqiClR@caboose.proxy.rlwy.net:45033/driver
+      - dbURL=mysql+mysqlconnector://{DB_KEY}
     networks:
       - esd-network
 
@@ -127,7 +127,7 @@ services:
     ports:
       - "5002:5002"
     environment:
-      - dbURL=mysql+mysqlconnector://root:jpPOaVCbCXnTWjDOBzPtDoRKYwqqiClR@caboose.proxy.rlwy.net:45033/booking
+      - dbURL=mysql+mysqlconnector://{DB_KEY}
     networks:
       - esd-network
 
@@ -140,7 +140,7 @@ services:
     ports:
       - "5003:5003"
     environment:
-      - dbURL=mysql+mysqlconnector://root:jpPOaVCbCXnTWjDOBzPtDoRKYwqqiClR@caboose.proxy.rlwy.net:45033/payment
+      - dbURL=mysql+mysqlconnector://{DB_KEY}
     networks:
       - esd-network
 
@@ -153,7 +153,7 @@ services:
     ports:
       - "5004:5004"
     environment:
-      - dbURL=mysql+mysqlconnector://root:jpPOaVCbCXnTWjDOBzPtDoRKYwqqiClR@caboose.proxy.rlwy.net:45033/notification
+      - dbURL=mysql+mysqlconnector://{DB_KEY}
       - RABBITMQ_HOST=rabbitmq
       - RABBITMQ_USER=admin
       - RABBITMQ_PASS=password123
@@ -172,7 +172,7 @@ services:
     ports:
       - "5005:5005"
     environment:
-      - dbURL=mysql+mysqlconnector://root:jpPOaVCbCXnTWjDOBzPtDoRKYwqqiClR@caboose.proxy.rlwy.net:45033/maintenance
+      - dbURL=mysql+mysqlconnector://{DB_KEY}
     networks:
       - esd-network
 
